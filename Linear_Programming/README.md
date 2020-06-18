@@ -36,7 +36,7 @@ Let Z be the overall profit made by the processing plant.
 
 Therefore, the task is to maximize the following objective function:
 
-max Z(X_1, X_2 ) ⁡= 150*X_1 + 175*X_2
+max Z(X_1, X_2 ) = 150*X_1 + 175*X_2
 
 Such that:
 
@@ -98,7 +98,7 @@ Let Z be the overall profit made by the production shop (as multiple of $100).
 
 Therefore, the task is to maximize the following objective function:
 
-max Z(X_1, X_2,X_3  )⁡ = 6\*X_1 + 14\*X_2 + 13\*X_3
+max Z(X_1, X_2,X_3  ) = 6\*X_1 + 14\*X_2 + 13\*X_3
 
 Such that:
 
@@ -128,7 +128,7 @@ Let Y1 and Y2 be the value (shadow price) of metalworking and woodworking resour
 
 Let W be the minimum acceptable price for the resources (as multiple of $100).
 
-min W(Y_1, Y_2)⁡ = 24\*Y_1 + 60\*Y_2
+min W(Y_1, Y_2) = 24\*Y_1 + 60\*Y_2
 
 Such that:
 
