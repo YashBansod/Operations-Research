@@ -201,11 +201,11 @@ fprintf('Project Cost - 10%% -> 90%% Boundary: (%.2f, %.2f)\n',...
 fprintf('Project Cost - 10%% -> 90%% Norm Inv Boundary: (%.2f, %.2f)\n',...
     norm_percent_10, norm_percent_90);
 ```
-Project Cost - Mean: 158972.94
-Project Cost - Standard Deviation: 10503.04
-Project Cost - Standard Error: 234.86
-Project Cost - 10% -> 90% Boundary: (145860.56, 172652.69)
-Project Cost - 10% -> 90% Norm Inv Boundary: (145512.75, 172433.14)
+Project Cost - Mean: 158972.94  
+Project Cost - Standard Deviation: 10503.04  
+Project Cost - Standard Error: 234.86  
+Project Cost - 10% -> 90% Boundary: (145860.56, 172652.69)  
+Project Cost - 10% -> 90% Norm Inv Boundary: (145512.75, 172433.14)  
 
 
 
@@ -468,6 +468,6 @@ fprintf('Final Y-Coordinate - Standard Deviation: %.2f\n', ...
     std_dev_end_y_cord)
 fprintf('Final Y-Coordinate - Standard Error: %.2f\n', std_err_end_y_cord)
 ```
-Final Y-Coordinate - Mean: 12.63
-Final Y-Coordinate - Standard Deviation: 2855.95
-Final Y-Coordinate - Standard Error: 40.39
+Final Y-Coordinate - Mean: 12.63  
+Final Y-Coordinate - Standard Deviation: 2855.95  
+Final Y-Coordinate - Standard Error: 40.39  
