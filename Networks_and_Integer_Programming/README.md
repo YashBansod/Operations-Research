@@ -115,8 +115,8 @@ disp(strcat(sprintf('Shortest path sequence: %s', shortest_path{1}), ...
     sprintf(' -> %s', shortest_path{2:end})))
 fprintf('Shortest path cost: %d $/Tb\n', path_len
 ```
-Shortest path sequence: So -> N2 -> N4 -> N3 -> Si
-Shortest path cost: 90 $/Tb
+Shortest path sequence: So -> N2 -> N4 -> N3 -> Si  
+Shortest path cost: 90 $/Tb  
 
 ---
 
@@ -309,22 +309,22 @@ fprintf([ 'Solution using integer programming: \nX_CH_LA = %d' ...
     '\nX_CH_BA = %d \nX_DA_LA = %d \nX_DA_BA = %d\n\n'], X)
 fprintf('Cost of Shipment: %.2f dollars/week\n', fval)
 ```
-Let C_A_B represent least cost path from city A to city B.
-Least cost of paths: 
-C_CH_LA = 150.00
-C_CH_BA = 140.00 
-C_DA_LA = 100.00 
-C_DA_BA = 130.00
-
-Let X_A_B represent number of drones shipped from city A to city B.
-Solution using integer programming: 
-X_CH_LA = 0
-X_CH_BA = 80 
-X_DA_LA = 120 
-X_DA_BA = 80
-
-Cost of Shipment: 33600.00 dollars/week
-
+Let C_A_B represent least cost path from city A to city B.  
+Least cost of paths:   
+C_CH_LA = 150.00  
+C_CH_BA = 140.00   
+C_DA_LA = 100.00   
+C_DA_BA = 130.00  
+  
+Let X_A_B represent number of drones shipped from city A to city B.  
+Solution using integer programming:   
+X_CH_LA = 0  
+X_CH_BA = 80   
+X_DA_LA = 120   
+X_DA_BA = 80  
+  
+Cost of Shipment: 33600.00 dollars/week  
+  
 ---
 
   
@@ -508,8 +508,8 @@ disp(strcat(sprintf('Critical path: %s', critical_path{1}), ...
     sprintf(' -> %s', critical_path{2:end})))
 fprintf('Longest path == Mean project duration: %.2f days\n\n', max_len(1))
 ```
-Critical path: N1 -> N3 -> N4 -> N7 -> N9
-Longest path == Mean project duration: 37.16 days
+Critical path: N1 -> N3 -> N4 -> N7 -> N9  
+Longest path == Mean project duration: 37.16 days  
 
 ### Calculate the shortest path
 
@@ -524,5 +524,5 @@ disp(strcat(sprintf('Shortest path sequence: %s', shortest_path{1}), ...
     sprintf(' -> %s', shortest_path{2:end})))
 fprintf('Shortest path cost: %.2f days\n', path_len)
 ```
-Shortest path sequence: N1 -> N3 -> N5 -> N7 -> N9
-Shortest path cost: 31.33 days
+Shortest path sequence: N1 -> N3 -> N5 -> N7 -> N9  
+Shortest path cost: 31.33 days  
