@@ -119,9 +119,9 @@ Shortest path sequence: So -> N2 -> N4 -> N3 -> Si
 Shortest path cost: 90 $/Tb
 
 ---
+
   
-  
-  
+
 ## [Problem 2 - Transshipment/Production Problem](./problem_2.m)
 
 **Problem Statement:** 
@@ -326,9 +326,9 @@ X_DA_BA = 80
 Cost of Shipment: 33600.00 dollars/week
 
 ---
+
   
-  
-  
+
 ## [Problem 3 - Critical Path Method](./problem_3.m)
 
 **Problem Statement:** 
