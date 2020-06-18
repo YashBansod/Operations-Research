@@ -333,7 +333,7 @@ Cost of Shipment: 33600.00 dollars/week
 
 **Problem Statement:** 
 
-Consider a Project that is characterized by the following activity edge table. The table indicates: 1) the activity names; 2) the associated event node names (numbers); 3) the minimum, maximum, and most likely activity duration times (in days) for each activity; and 4) the minimum, maximum, and most likely hourly labor costs for each activity. Assume two people are required to complete each task and that each works 8 hours a day.
+Consider a Project that is characterized by the following activity edge table. The table indicates: 1) the activity names; 2) the associated event node names (numbers); 3) the  duration times (in days) for each activity; and 4) the hourly labor costs for each activity. Assume two people are required to complete each task and that each works 8 hours a day.
 
 <div class="table-wrapper">
 <table class="alt">
