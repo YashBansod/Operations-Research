@@ -1,4 +1,4 @@
-# Monte_Carlo_Simulation
+# Monte Carlo Simulation
 
 ## [Problem 1 - Static Monte Carlo Project Cost Simulation](./problem_1.m)
 
