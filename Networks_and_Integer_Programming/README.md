@@ -290,9 +290,6 @@ ub = inf(4, 1);
 [X, fval] = intlinprog(f, [1 2 3 4], A, B, Aeq, Beq, lb, ub);
 ```
 LP:                Optimal objective value is 33600.000000.                                        
-Optimal solution found.
-
-Intlinprog stopped at the root node because the objective value is within a gap tolerance of the optimal value, options. AbsoluteGapTolerance = 0 (the default value). The intcon variables are integer within tolerance, options.IntegerTolerance = 1e-05 (the default value).
 
 
 ### Print the computation results
@@ -315,16 +312,16 @@ C_CH_LA = 150.00
 C_CH_BA = 140.00   
 C_DA_LA = 100.00   
 C_DA_BA = 130.00  
-  
+
 Let X_A_B represent number of drones shipped from city A to city B.  
 Solution using integer programming:   
 X_CH_LA = 0  
 X_CH_BA = 80   
 X_DA_LA = 120   
 X_DA_BA = 80  
-  
+
 Cost of Shipment: 33600.00 dollars/week  
-  
+
 ---
 
   
@@ -526,3 +523,175 @@ fprintf('Shortest path cost: %.2f days\n', path_len)
 ```
 Shortest path sequence: N1 -> N3 -> N5 -> N7 -> N9  
 Shortest path cost: 31.33 days  
+
+---
+
+## [Problem 4 - Transshipment Problem](./problem_4.m)
+
+The case of a company that produces a product at two plants (P1 and P2) and has two warehouses (WH1 and WH2). They produce the product, and send it to a warehouse, from which the product is then distributed to three retail outlets (RO1, RO2, & RO3). Each truck is capable of shipping “standard truck load” (i.e. ‘unit’) of product. Each plant has a different maximum output and each retail outlet has a different demand (see tables below). There is a maximum number of units that may be shipped from each plant to each warehouse and from each warehouse to each retail outlet and a different cost associated with each such link (see tables below). **The company wants to develop a distribution plan that will minimize shipping costs**.
+
+<div class="table-wrapper">
+<table class="alt">
+	<tbody>
+		<tr>
+			<td colspan="6"><b>Plant to Warehouse (WH)</b></td>
+		</tr>
+		<tr>
+			<td rowspan="2"><b>Plant</b></td> <td colspan="2"><b>Unit Ship Cost</b></td> <td colspan="2"><b>Shipping Capacity (Units)</b></td> <td rowspan="2"><b>Max Output</b></td>
+		</tr>
+		<tr>
+			<td><b>WH1</b></td> <td><b>WH2</b></td> <td><b>WH1</b></td> <td><b>WH2</b></td>
+		</tr>
+		<tr>
+			<td><b>P1</b></td> <td>$425</td> <td>$560</td> <td>125</td> <td>150</td> <td>200</td>
+		</tr>
+		<tr>
+			<td><b>P2</b></td> <td>$510</td> <td>$600</td> <td>175</td> <td>200</td> <td>300</td>
+		</tr>
+	</tbody>
+</table>
+</div>
+
+<div class="table-wrapper">
+<table class="alt">
+	<tbody>
+		<tr>
+			<td colspan="7"><b>Warehouse to Retail Outlet (RO)</b></td>
+		</tr>
+		<tr>
+			<td rowspan="2"><b>Warehouse</b></td> <td colspan="3"><b>Unit Ship Cost</b></td> <td colspan="3"><b>Shipping Capacity (Units)</b></td>
+		</tr>
+		<tr>
+			<td><b>RO1</b></td> <td><b>RO2</b></td> <td><b>RO3</b></td> <td><b>RO1</b></td> <td><b>RO2</b></td> <td><b>RO3</b></td>
+		</tr>
+		<tr>
+			<td><b>WH1</b></td> <td>$470</td> <td>$505</td> <td>$490</td> <td>100</td> <td>150</td> <td>100</td>
+		</tr>
+		<tr>
+			<td><b>WH2</b></td> <td>$390</td> <td>$410</td> <td>$440</td> <td>125</td> <td>150</td> <td>75</td>
+		</tr>
+	</tbody>
+</table>
+</div>
+
+<div class="table-wrapper">
+<table class="alt">
+	<tbody>
+		<tr>
+			<td>&nbsp;</td> <td><b> RO1 </b></td> <td><b> RO2 </b></td> <td><b> RO3 </b></td>
+		</tr>
+		<tr>
+			<td><b> Demand (Units) </b></td> <td>100</td> <td>150</td> <td>100</td>
+		</tr>
+	</tbody>
+</table>
+</div>
+---
+
+**MATLAB Code: ** [problem_4.m](./problem_4.m)
+
+Author: Yash Bansod
+Date: 11th March, 2020
+Problem 4 - Transshipment Problem
+
+GitHub: https://github.com/YashBansod
+
+### Clear the environment and the command line
+
+```matlab
+clear;
+clc;
+close all;
+```
+
+### Define the graph
+
+```matlab
+% Specify the node names
+n_names = {'P1', 'P2', 'WH1', 'WH2', 'RO1', 'RO2', 'RO3'};
+num_nodes = size(n_names, 2);
+
+% Specify the edges and thier costs
+e_start = [1 1 2 2 3 3 3 4 4 4];
+e_stop  = [3 4 3 4 5 6 7 5 6 7];
+e_cost  = [425 560 510 600 470 505 490 390 410 440];
+
+% Some dimension checks to make sure values were inputted correctly
+assert(size(e_start, 2) == size(e_stop, 2));
+assert(size(e_start, 2) == size(e_cost, 2));
+
+% Create the graph
+graph = digraph(e_start, e_stop, e_cost, n_names);
+```
+
+### Plotting the graph to visualize it better
+
+```matlab
+figure('Name', 'Problem graph')
+p_g_plot = plot(graph, ...
+    'EdgeLabel', graph.Edges.Weight, ...
+    'LineWidth', 4 * graph.Edges.Weight / max(graph.Edges.Weight), ...
+    'ArrowSize', 15);
+title('Graph representing nodes and shipping costs')
+xlabel('X Axis')
+ylabel('Y Axis')
+```
+
+<div><span class="image fit"><img src="./images/problem_4_01.png"></span></div>
+
+### Define the optimization problem
+
+```matlab
+f = e_cost;
+
+A = [   1 1 0 0 0 0 0 0 0 0;
+        0 0 1 1 0 0 0 0 0 0];
+
+B = [200; 300];
+
+Aeq = [ 0 0 0 0 1 0 0 1 0 0;
+        0 0 0 0 0 1 0 0 1 0;
+        0 0 0 0 0 0 1 0 0 1;
+        1 0 1 0 -1 -1 -1 0 0 0;
+        0 1 0 1 0 0 0 -1 -1 -1];
+
+Beq = [100; 150; 100; 0; 0];
+
+lb = zeros(10, 1);
+ub = [125; 150; 175; 200; 100; 150; 100; 125; 150; 75];
+```
+
+### Find the solution
+
+```matlab
+% Compute the solution using linear programming
+[X, fval] = intlinprog(f, 1:10, A, B, Aeq, Beq, lb, ub);
+```
+LP:                Optimal objective value is 335875.000000.                             
+
+### Print the computation results
+
+```matlab
+% print out the solution obtained using integer programming
+fprintf('Cost of Shipment: %d dollars\n\n', fval)
+disp("Units Shipped [From->To:Number]");
+% Optimal Plan
+for index = 1:size(e_start, 2)
+    print_str = strcat(n_names{e_start(index)}, '->', ...
+        n_names{e_stop(index)}, ': ', int2str(X(index)));
+    fprintf('[%s]\n', print_str);
+end
+```
+Cost of Shipment: 335875 dollars  
+
+Units Shipped [From->To:Number]  
+[P1->WH1:125]  
+[P1->WH2:75]  
+[P2->WH1:75]  
+[P2->WH2:75]  
+[WH1->RO1:100]  
+[WH1->RO2:0]  
+[WH1->RO3:100]  
+[WH2->RO1:0]  
+[WH2->RO2:150]  
+[WH2->RO3:0]   
