@@ -12,7 +12,7 @@ Consider a Project that is characterized by the following activity edge table. T
 			<td rowspan=2><b>Activity</b></td> <td rowspan=2><b>Nodes</b></td> <td colspan=3><b>Duration Est (days)</b></td> <td colspan=3><b>Labor Cost ($/h)</b></td>
 		</tr>
 		<tr>
-			<td><b>Min</b></td> <td><b>Max</b></td> <td><b>Likely</b></td> <td><b>Min</b></td> <td><b>Max</b></td> <td><b>Likely</b></td>
+			<td></td><td></td><td><b>Min</b></td> <td><b>Max</b></td> <td><b>Likely</b></td> <td><b>Min</b></td> <td><b>Max</b></td> <td><b>Likely</b></td>
 		</tr>
 		<tr>
 			<td>A</td> <td>1, 2</td> <td>4</td> <td>8</td> <td>6</td> <td>$100</td> <td>$150</td> <td>$120</td>
