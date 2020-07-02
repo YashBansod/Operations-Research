@@ -25,7 +25,6 @@ A natural gas processing plant can produce two grades of gas: Regular and Premiu
   </tr>
 </table>
 </div>
-
 ---
 
 **Standard Form Representation:**
@@ -62,6 +61,60 @@ X_1 = 3, X_2 = 5, Z = 1325
 
 **Solution Code:** [problem_1.m](./problem_1.m)
 
+```matlab
+Author: Yash Bansod
+Date: 13th February, 2020
+Problem 1 - Natural gas processing plant optimization
+```
+
+GitHub: https://github.com/YashBansod
+
+### Clear the environment and the command line
+
+```matlab
+clear;
+clc;
+```
+
+### Define the optimization problem
+
+```matlab
+% Define the objective function
+f = [-150 -175];
+
+% Constraint matrix and vector (A*X <= B)
+A = [7 11; 10 8; 1 0; 0 1];
+B = [77; 80; 9; 6];
+
+Aeq = [];
+beq = [];
+lb = zeros(2, 1);
+ub = inf(2, 1);
+```
+
+### Find the solution
+
+```matlab
+% Compute the solution using linear programming
+[X, fval] = linprog(f, A, B, Aeq, beq, lb, ub);
+
+% print out the solution obtained using linear programming
+fprintf('Solution using linear programming: X1 = %f, X2 = %f\n', X)
+fprintf('Profit: %f\n\n', -fval)
+
+% Compute the solution using integer programming
+[X, fval] = intlinprog(f, [1 2], A, B, Aeq, beq, lb, ub);
+
+% print out the solution obtained using integer programming
+fprintf('Solution using integer programming: X1 = %d, X2 = %d\n', X)
+fprintf('Profit: %d\n\n', -fval)
+```
+Solution using linear programming: X1 = 4.888889, X2 = 3.888889
+Profit: 1413.888889
+
+Solution using integer programming: X1 = 3.000000e+00, X2 = 5.000000e+00
+Profit: 1325
+
 ---
 
 ## Problem 2 - Automobile Shop Optimization
@@ -87,7 +140,6 @@ You own of a shop producing automobile trailers and wish to determine the best m
   </tr>
 </table>
 </div>
-
 ---
 
 **Standard Form Representation:**
@@ -120,6 +172,58 @@ X_1 = 36, X_2 = 0, X_3 = 6, Z = 294
 
 **Solution Code:** [problem_2a.m](./problem_2a.m)
 
+Author: Yash Bansod
+Date: 13th February, 2020
+Problem 2a - Automobile Shop Optimization
+
+GitHub: https://github.com/YashBansod
+
+### Clear the environment and the command line
+
+```matlab
+clear;
+clc;
+```
+
+### Define the optimization problem
+
+```matlab
+% Define the objective function
+f = [-6 -14 -13];
+
+% Constraint matrix and vector (A*X <= B)
+A = [0.5 2 1; 1 2 4];
+B = [24; 60];
+
+Aeq = [];
+beq = [];
+lb = zeros(3, 1);
+ub = inf(3, 1);
+```
+
+### Find the solution
+
+```matlab
+% Compute the solution using linear programming
+[X, fval] = linprog(f, A, B, Aeq, beq, lb, ub);
+
+% print out the solution obtained using linear programming
+sprintf('Solution using linear programming: X1 = %f, X2 = %f, X3 = %f', X)
+sprintf('Profit: %f', -fval)
+
+% Compute the solution using integer programming
+[X, fval] = intlinprog(f, [1 2 3], A, B, Aeq, beq, lb, ub);
+
+% print out the solution obtained using integer programming
+sprintf('Solution using integer programming: X1 = %d, X2 = %d, X3 = %d', X)
+sprintf('Profit: %d', -fval)
+```
+Solution using linear programming: X1 = 36.000000, X2 = 0.000000, X3 = 6.000000
+Profit: 294.000000
+
+Solution using integer programming: X1 = 36, X2 = 0, X3 = 6.000000e+00
+Profit: 294
+
 ---
 
 **Dual of Standard Form:**
@@ -145,6 +249,48 @@ Y_1, Y_2 ∈ R+                                     (Positive real value constra
 Y_1 = 11, Y_2 = 0.5, Z = 294
 
 **Solution Code:** [problem_2b.m](./problem_2b.m)
+
+Author: Yash Bansod
+Date: 13th February, 2020
+Problem 2b - Automobile Shop Optimization (Dual)
+
+GitHub: https://github.com/YashBansod
+
+### Clear the environment and the command line
+
+```matlab
+clear;
+clc;
+```
+
+### Define the optimization problem
+
+```matlab
+% Define the objective function
+f = [24 60];
+
+% Constraint matrix and vector (A*Y <= B)
+A = [-0.5 -1; -2 -2; -1 -4];
+B = [-6; -14; -13];
+
+Aeq = [];
+beq = [];
+lb = zeros(2, 1);
+ub = inf(2, 1);
+```
+
+### Find the solution
+
+```matlab
+% Compute the solution using linear programming
+[Y, fval] = linprog(f, A, B, Aeq, beq, lb, ub);
+
+% print out the solution obtained using linear programming
+sprintf('Solution using linear programming: Y1 = %f, Y2 = %f', Y)
+sprintf('Minimum acceptable price: %f', fval)
+```
+Solution using linear programming: Y1 = 11.000000, Y2 = 0.500000
+Minimum acceptable price: 294.000000
 
 ---
 
