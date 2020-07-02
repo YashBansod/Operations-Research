@@ -10,9 +10,9 @@ Develop a MATLAB code for an Intelligent Agent that finds a path from start to g
 
 **MATLAB Code:** [problem_1.m](./problem_1.m)
 
-Author: Yash Bansod
-Date: 22nd April, 2020
-Problem 1 - Intelligent Agent
+Author: Yash Bansod  
+Date: 22nd April, 2020  
+Problem 1 - Intelligent Agent  
 
 GitHub: https://github.com/YashBansod
 
@@ -100,7 +100,7 @@ legend(hidden_h, {'free space', 'obstacles', 'closed nodes', ...
     'open nodes', 'start node', 'goal node', 'shortest path'} )
 ```
 
-<div><span class="image fit"><img src="./images/problem_1_01.png"></span></div>
+<div><span class="image fit"><img src="./images/problem_1_01.png" alt=""></span></div>
 
 ### Process the map to update the parent information and distance from start
 
@@ -171,7 +171,7 @@ while true                              % Create an infinite loop
 end
 ```
 
-<div><span class="image fit"><img src="./images/problem_1_02.png"></span></div>
+<div><span class="image fit"><img src="./images/problem_1_02.png" alt=""></span></div>
 
 ### Construct route from start to dest by following the parent links
 

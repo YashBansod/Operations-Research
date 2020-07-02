@@ -25,6 +25,7 @@ A natural gas processing plant can produce two grades of gas: Regular and Premiu
   </tr>
 </table>
 </div>
+
 ---
 
 **Standard Form Representation:**
@@ -49,7 +50,7 @@ Such that:
 
 X_1, X_2 ∈ Z+                   (Optional positive integer value constraint)
 
-<div><span class="image fit"><img src="./images/graphical_solution.png"></span></div>
+<div><span class="image fit"><img src="./images/graphical_solution.png" alt=""></span></div>
 
 **Linear Solution:**
 
@@ -61,13 +62,12 @@ X_1 = 3, X_2 = 5, Z = 1325
 
 **Solution Code:** [problem_1.m](./problem_1.m)
 
-```matlab
-Author: Yash Bansod
-Date: 13th February, 2020
-Problem 1 - Natural gas processing plant optimization
-```
 
-GitHub: https://github.com/YashBansod
+Author: Yash Bansod  
+Date: 13th February, 2020  
+Problem 1 - Natural gas processing plant optimization  
+
+GitHub: https://github.com/YashBansod  
 
 ### Clear the environment and the command line
 
@@ -140,6 +140,7 @@ You own of a shop producing automobile trailers and wish to determine the best m
   </tr>
 </table>
 </div>
+
 ---
 
 **Standard Form Representation:**
@@ -172,9 +173,9 @@ X_1 = 36, X_2 = 0, X_3 = 6, Z = 294
 
 **Solution Code:** [problem_2a.m](./problem_2a.m)
 
-Author: Yash Bansod
-Date: 13th February, 2020
-Problem 2a - Automobile Shop Optimization
+Author: Yash Bansod  
+Date: 13th February, 2020  
+Problem 2a - Automobile Shop Optimization  
 
 GitHub: https://github.com/YashBansod
 
@@ -250,9 +251,9 @@ Y_1 = 11, Y_2 = 0.5, Z = 294
 
 **Solution Code:** [problem_2b.m](./problem_2b.m)
 
-Author: Yash Bansod
-Date: 13th February, 2020
-Problem 2b - Automobile Shop Optimization (Dual)
+Author: Yash Bansod  
+Date: 13th February, 2020  
+Problem 2b - Automobile Shop Optimization (Dual)  
 
 GitHub: https://github.com/YashBansod
 

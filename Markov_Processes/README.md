@@ -16,17 +16,17 @@ p\_(n, n) = P(X\_(t+1)=n│X\_t=n) = 1 - λ\_n - μ\_n
 
 Where P(X\_(t+1)=n+1│X\_t=n) is the probability that the population will increase by one in one time step.
 
-<div><span class="image fit"><img src="./images/markov_process_1.svg"></span></div>
+<div><span class="image fit"><img src="./images/markov_process_1.svg" alt=""></span></div>
 
 a.  Let us consider N=4, λ\_n=0.5, μ\_n=0.3 for all n=0,1,2,…N along with the condition λ\_N = μ\_0 = 0 (i.e. probabilities do not depend on the population size), and the initial probabilities at time t=0 are given as p\_0(0) = p\_1(0) = p\_2(0) = p\_3(0) = p\_4(0) = 0.2 (uniformly distributed). Find (using MATLAB) p\_n(t)  for all n=0,1,…, N for t=1,2,…,50 and plot each p\_n(t) with time t. 
 
 ---
 
-**MATLAB Code: ** [problem_1a.m](./problem_1a.m)
+**MATLAB Code:** [problem_1a.m](./problem_1a.m)
 
-Author: Yash Bansod
-Date: 26th March, 2020
-Problem 1a - Markov Birth-Death Process
+Author: Yash Bansod  
+Date: 26th March, 2020  
+Problem 1a - Markov Birth-Death Process  
 
 GitHub: https://github.com/YashBansod
 
@@ -110,7 +110,7 @@ ylabel('Probability');
 grid on;
 ```
 
-<div><span class="image fit"><img src="./images/problem_1a_01.png"></span></div>
+<div><span class="image fit"><img src="./images/problem_1a_01.png" alt=""></span></div>
 
 
 
@@ -122,12 +122,12 @@ b. Find the expected size of the population, E[X_t], for times t=0,1,2,…,100 a
 
 ---
 
-**MATLAB Code: ** [problem_1b.m](./problem_1b.m)
+**MATLAB Code:** [problem_1b.m](./problem_1b.m)
 
 
-Author: Yash Bansod
-Date: 26th March, 2020
-Problem 1b - Markov Birth-Death Process
+Author: Yash Bansod  
+Date: 26th March, 2020  
+Problem 1b - Markov Birth-Death Process  
 
 GitHub: https://github.com/YashBansod
 
@@ -205,7 +205,7 @@ ylabel('Expected Population');
 grid on;
 ```
 
-<div><span class="image fit"><img src="./images/problem_1b_01.png"></span></div>
+<div><span class="image fit"><img src="./images/problem_1b_01.png" alt=""></span></div>
 
 ---
 
@@ -225,11 +225,11 @@ Under this situation, it is expected that the population size will decrease. Tak
 
 ---
 
-**MATLAB Code: ** [problem_1c.m](./problem_1c.m)
+**MATLAB Code:** [problem_1c.m](./problem_1c.m)
 
-Author: Yash Bansod
-Date: 26th March, 2020
-Problem 1c - Markov Birth-Death Process
+Author: Yash Bansod  
+Date: 26th March, 2020  
+Problem 1c - Markov Birth-Death Process  
 
 GitHub: https://github.com/YashBansod
 
@@ -333,7 +333,7 @@ ylabel('Expected Population');
 grid on;
 ```
 
-<div><span class="image fit"><img src="./images/problem_1c_01.png"></span></div>
+<div><span class="image fit"><img src="./images/problem_1c_01.png" alt=""></span></div>
 
 ### Auxiliary Plots
 
@@ -359,7 +359,7 @@ ylabel('Probability');
 grid on;
 ```
 
-<div><span class="image fit"><img src="./images/problem_1c_02.png"></span></div>
+<div><span class="image fit"><img src="./images/problem_1c_02.png" alt=""></span></div>
 
 ---
 
@@ -375,11 +375,11 @@ where n\_ij  is the number of transitions from state i to state j and n\_i  is t
 
 ---
 
-**MATLAB Code: ** [problem_2.m](./problem_2.m)
+**MATLAB Code:** [problem_2.m](./problem_2.m)
 
-Author: Yash Bansod
-Date: 26th March, 2020
-Problem 2 - Estimating parameters of a Markov Chain
+Author: Yash Bansod  
+Date: 26th March, 2020  
+Problem 2 - Estimating parameters of a Markov Chain  
 
 GitHub: https://github.com/YashBansod
 
@@ -452,7 +452,6 @@ disp(transition_probability_table);
 Transition Probability Table:
 <div class="table-wrapper">
 <table class="alt">
-	<tbody>
 		<tr>
 			<td>&nbsp;</td> <td><b>1</b></td> <td><b>2</b></td> <td><b>4</b></td> <td><b>12</b></td>
 		</tr>
@@ -468,7 +467,6 @@ Transition Probability Table:
 		<tr>
 			<td><b>12</b></td> <td>0</td> <td>0</td> <td>1</td> <td>0</td>
 		</tr>
-	</tbody>
 </table>
 </div>
 
@@ -485,11 +483,11 @@ Note that here we want a time evolution of states not the distribution (π\_t or
 
 ---
 
-**MATLAB Code: ** [problem_3a.m](./problem_3a.m)
+**MATLAB Code:** [problem_3a.m](./problem_3a.m)
 
-Author: Yash Bansod
-Date: 26th March, 2020
-Problem 3a - Simulating a Markov Chain using Monte Carlo
+Author: Yash Bansod  
+Date: 26th March, 2020  
+Problem 3a - Simulating a Markov Chain using Monte Carlo  
 
 GitHub: https://github.com/YashBansod
 
@@ -570,11 +568,11 @@ a b a b a b b b a b a a b a a b a a a a b a b a a b b a a a b a a b b a a a b a 
 b. Use the output sequence from problem 3a as an input to the code developed in Problem 2 and estimate the transition probability matrix as the sequence length is increased from 21 (i.e., 20 transitions) to 101 or even higher. What do you find?
 
 ---
-**MATLAB Code: ** [problem_3b.m](./problem_3b.m)
+**MATLAB Code:** [problem_3b.m](./problem_3b.m)
 
-Author: Yash Bansod
-Date: 26th March, 2020
-Problem 3b - Simulating a Markov Chain using Monte Carlo
+Author: Yash Bansod  
+Date: 26th March, 2020  
+Problem 3b - Simulating a Markov Chain using Monte Carlo  
 
 GitHub: https://github.com/YashBansod
 
@@ -666,7 +664,6 @@ disp(transition_probability_table);
 Transition Probability Table:
 <div class="table-wrapper">
 <table class="alt">
-	<tbody>
 		<tr>
 			<td>&nbsp;</td> <td><b>a</b></td> <td><b>b</b></td>
 		</tr>
@@ -676,7 +673,6 @@ Transition Probability Table:
 		<tr>
 			<td><b>b</b></td> <td>0.60472</td> <td>0.39528</td> 
 		</tr>
-	</tbody>
 </table>
 </div>
 
@@ -691,7 +687,6 @@ Consider a Markov chain system that is defined by three states (S1, S2, S3). Let
 
 <div class="table-wrapper">
 <table class="alt">
-	<tbody>
 		<tr>
 			<td>0.6</td> <td>0.2</td> <td>0.2</td>
 		</tr>
@@ -701,7 +696,6 @@ Consider a Markov chain system that is defined by three states (S1, S2, S3). Let
 		<tr>
 			<td>0.5</td> <td>0.3</td> <td>0.2</td> 
 		</tr>
-	</tbody>
 </table>
 </div>
 
@@ -709,11 +703,11 @@ Solve the equation analytically for the (exact) Steady State probability state v
 
 ---
 
-**MATLAB Code: ** [problem_4a.m](./problem_4a.m)
+**MATLAB Code:** [problem_4a.m](./problem_4a.m)
 
-Author: Yash Bansod
-Date: 26th March, 2020
-Problem 4a - Simulating a Markov Chain using Monte Carlo
+Author: Yash Bansod  
+Date: 26th March, 2020  
+Problem 4a - Simulating a Markov Chain using Monte Carlo  
 
 GitHub: https://github.com/YashBansod
 
@@ -775,7 +769,7 @@ ylabel('Probability');
 grid on;
 ```
 
-<div><span class="image fit"><img src="./images/problem_4a_01.png"></span></div>
+<div><span class="image fit"><img src="./images/problem_4a_01.png" alt=""></span></div>
 
 ### Print the results
 
@@ -786,14 +780,12 @@ disp(array2table(state_mat(end, :),'VariableNames' , states));
 Final system state:
 <div class="table-wrapper">
 <table class="alt">
-	<tbody>
 		<tr>
 			<td><b>S1</b></td> <td><b>S2</b></td> <td><b>S3</b></td> 
 		</tr>
 		<tr>
 			<td>0.49367</td> <td>0.27848</td> <td>0.22785</td> 
 		</tr>
-	</tbody>
 </table>
 </div>
 
@@ -809,11 +801,11 @@ b. Write a Monte Carlo simulation for this system that will:
 
 ---
 
-**MATLAB Code: ** [problem_4b.m](./problem_4b.m)
+**MATLAB Code:** [problem_4b.m](./problem_4b.m)
 
-Author: Yash Bansod
-Date: 26th March, 2020
-Problem 4b - Simulating a Markov Chain using Monte Carlo
+Author: Yash Bansod  
+Date: 26th March, 2020  
+Problem 4b - Simulating a Markov Chain using Monte Carlo  
 
 GitHub: https://github.com/YashBansod
 
@@ -918,7 +910,7 @@ ylabel('Cumulative Running Mean');
 grid on;
 ```
 
-<div><span class="image fit"><img src="./images/problem_4b_01.png"></span></div>
+<div><span class="image fit"><img src="./images/problem_4b_01.png" alt=""></span></div>
 
 ### Print the results
 
@@ -929,14 +921,12 @@ disp(array2table(crm_state_mat(end, :),'VariableNames' , states));
 Final system state:
 <div class="table-wrapper">
 <table class="alt">
-	<tbody>
 		<tr>
 			<td><b>S1</b></td> <td><b>S2</b></td> <td><b>S3</b></td> 
 		</tr>
 		<tr>
 			<td>0.4995</td> <td>0.27035</td> <td>0.23015</td> 
 		</tr>
-	</tbody>
 </table>
 </div>
 
@@ -947,7 +937,7 @@ Final system state:
 
 You are presented with a system that has the following states: Ready (R), Operating (O), and Maintenance (M). Assume that over a period of one hour, the probability of going from R->O is 0.5, the probability of going from R->M is 0.1, the probability of going from O->M is 0.3, and the probability of going from M->R is 0.5. 
 
-<div><span class="image fit"><img src="./images/markov_process_2.svg"></span></div>
+<div><span class="image fit"><img src="./images/markov_process_2.svg" alt=""></span></div>
 
 Write a MATLAB Monte Carlo program that will use the following input and provide the following output: 
 
@@ -959,11 +949,11 @@ Write a MATLAB Monte Carlo program that will use the following input and provide
 
 ---
 
-**MATLAB Code: ** [problem_5.m](./problem_5.m)
+**MATLAB Code:** [problem_5.m](./problem_5.m)
 
-Author: Yash Bansod
-Date: 18th April, 2020
-Problem 5 - Markov Processes
+Author: Yash Bansod  
+Date: 18th April, 2020  
+Problem 5 - Markov Processes  
 
 GitHub: https://github.com/YashBansod
 
@@ -1078,7 +1068,7 @@ ylabel('Cumulative Running Mean');
 grid on;
 ```
 
-<div><span class="image fit"><img src="./images/problem_5_01.png"></span></div>
+<div><span class="image fit"><img src="./images/problem_5_01.png" alt=""></span></div>
 
 ### Print the results
 
@@ -1089,13 +1079,11 @@ disp(array2table(crm_state_mat(end, :),'VariableNames' , states));
 Final system state:
 <div class="table-wrapper">
 <table class="alt">
-	<tbody>
 		<tr>
 			<td><b>R</b></td> <td><b>O</b></td> <td><b>M  </b></td> 
 		</tr>
 		<tr>
 			<td>0.25737</td> <td>0.41529</td> <td>0.32734</td> 
 		</tr>
-	</tbody>
 </table>
 </div>

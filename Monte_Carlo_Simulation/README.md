@@ -8,7 +8,6 @@ Consider a Project that is characterized by the following activity edge table. T
 
 <div class="table-wrapper">
 <table class="alt">
-	<tbody>
 		<tr>
 			<td rowspan=2><b>Activity</b></td> <td rowspan=2><b>Nodes</b></td> <td colspan=3><b>Duration Est (days)</b></td> <td colspan=3><b>Labor Cost ($/h)</b></td>
 		</tr>
@@ -48,7 +47,6 @@ Consider a Project that is characterized by the following activity edge table. T
 		<tr>
 			<td>N</td> <td>8, 9</td> <td>6</td> <td>11</td> <td>9</td> <td>$90</td> <td>$110</td> <td>$100</td>
 		</tr>
-	</tbody>
 </table>
 </div>
 
@@ -64,11 +62,11 @@ Use Monte Carlo simulation to calculate:
 
 ---
 
-**MATLAB Code: ** [problem_1.m](./problem_1.m)
+**MATLAB Code:** [problem_1.m](./problem_1.m)
 
-Author: Yash Bansod
-Date: 27th February, 2020
-Problem 1 - Static Monte Carlo Project Cost Simulation
+Author: Yash Bansod  
+Date: 27th February, 2020  
+Problem 1 - Static Monte Carlo Project Cost Simulation  
 
 GitHub: https://github.com/YashBansod
 
@@ -187,8 +185,8 @@ xlabel('Num Samples');
 ylabel('CRM of Project Cost in $');
 ```
 
-<div><span class="image fit"><img src="./images/problem_1_01.png"></span></div>
-<div><span class="image fit"><img src="./images/problem_1_02.png"></span></div>
+<div><span class="image fit"><img src="./images/problem_1_01.png" alt=""></span></div>
+<div><span class="image fit"><img src="./images/problem_1_02.png" alt=""></span></div>
 
 ### Print the computation results
 
@@ -217,7 +215,7 @@ Project Cost - 10% -> 90% Norm Inv Boundary: (145512.75, 172433.14)
 
 Consider an autonomous vehicle (AV) attempting to move in the “X direction” subject to random gusts of wind (blowing in the +/- Y direction). Assume the AV has a mass of 2 kg and is traveling at a speed of 60 km/h. Assume that the impulse (change in momentum) imparted to the AV by the wind gusts over a period of 5 seconds is characterized by a normal distribution with a mean of 0 kg km/h and a standard deviation of 10 kg km/hr.
 
-<div class="6u$"><span class="image fit"><img src="./images/AV_schematic.svg"></span></div>
+<div class="6u$"><span class="image fit"><img src="./images/AV_schematic.svg" alt=""></span></div>
 
 a. Develop and submit a MATLAB program that: 
 
@@ -228,11 +226,11 @@ a. Develop and submit a MATLAB program that:
 
 ---
 
-**MATLAB Code: ** [problem_2a.m](./problem_2a.m)
+**MATLAB Code:** [problem_2a.m](./problem_2a.m)
 
-Author: Yash Bansod
-Date: 27th February, 2020
-Problem 2a - Time-Driven Dynamic MC Simulation of an AV
+Author: Yash Bansod  
+Date: 27th February, 2020  
+Problem 2a - Time-Driven Dynamic MC Simulation of an AV  
 
 GitHub: https://github.com/YashBansod
 
@@ -327,8 +325,8 @@ title('Position Trajectory of AV');
 xlabel('Meters');
 ylabel('Meters');
 ```
-<div><span class="image fit"><img src="./images/problem_2a_01.png"></span></div>
-<div><span class="image fit"><img src="./images/problem_2a_02.png"></span></div>
+<div><span class="image fit"><img src="./images/problem_2a_01.png" alt=""></span></div>
+<div><span class="image fit"><img src="./images/problem_2a_02.png" alt=""></span></div>
 
 ### Print the computation results
 
@@ -358,11 +356,11 @@ b. Develop and submit a MATLAB program that:
 
 ---
 
-**MATLAB Code: ** [problem_2b.m](./problem_2b.m)
+**MATLAB Code:** [problem_2b.m](./problem_2b.m)
 
-Author: Yash Bansod
-Date: 27th February, 2020
-Problem 2b - Time-Driven Dynamic MC Simulation of an AV
+Author: Yash Bansod  
+Date: 27th February, 2020  
+Problem 2b - Time-Driven Dynamic MC Simulation of an AV  
 
 GitHub: https://github.com/YashBansod
 
@@ -458,7 +456,7 @@ xlabel('Y Coordinate Position');
 ylabel('Count');
 ```
 
-<div><span class="image fit"><img src="./images/problem_2b_01.png"></span></div>
+<div><span class="image fit"><img src="./images/problem_2b_01.png" alt=""></span></div>
 
 ### Print the computation results
 

@@ -20,16 +20,16 @@ We want to build a Kalman filter that will best predict the next location of the
 
 Suppose θ\_m (0) = 0.000 rad, θ\_m (1) = 0.010 rad, and θ\_m (2) = 0.020 rad.
 
-<div><span class="image fit"><img src="./images/kalman_filter.svg"></span></div>
+<div><span class="image fit"><img src="./images/kalman_filter.svg" alt=""></span></div>
 
 
 
 ---
 **MATLAB Code:** [problem_1.m](./problem_1.m)
 
-Author: Yash Bansod
-Date: 2nd May, 2020
-Problem 1 - 1D Kalman Filter
+Author: Yash Bansod  
+Date: 2nd May, 2020  
+Problem 1 - 1D Kalman Filter  
 
 GitHub: https://github.com/YashBansod
 
@@ -150,5 +150,5 @@ ylabel('Position');
 legend('Actual Position', 'Tracked position after KF predict', ...
         'Tracked position after KF update', 'Raw measurement conversion');
 ```
-<div><span class="image fit"><img src="./images/problem_1_01.png"></span></div>
-<div><span class="image fit"><img src="./images/problem_1_02.png"></span></div>
+<div><span class="image fit"><img src="./images/problem_1_01.png" alt=""></span></div>
+<div><span class="image fit"><img src="./images/problem_1_02.png" alt=""></span></div>

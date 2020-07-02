@@ -2,15 +2,16 @@
 
 ## [Problem 1 - Networks & Shortest Path](./problem_1.m)
 
-**Problem Statement:** 
-
-Suppose you need to write a routing algorithm for a communications network that will route traffic through an internetwork of networks (Ni) at the lowest possible cost. Your manager wants to know the least cost path between Source (So) and Sink (Si). Consider a communications network that is characterized by the following link costs.
+**Problem Statement:**  
+Suppose you need to write a routing algorithm for a communications network that will route traffic through an 
+internetwork of networks (Ni) at the lowest possible cost. Your manager wants to know the least cost path between 
+Source (So) and Sink (Si). Consider a communications network that is characterized by the following link costs.  
 
 <div class="table-wrapper">
 <table class="alt">
-	<tbody>
 		<tr>
-			<td><b>Link</b></td> <td><b>Cost ($/Tb)</strong></p></td> <td><b>Link</b></td> <td><b>Cost ($/Tb)</strong></p></td> <td><b>Link</b></td> <td><b>Cost ($/Tb)</strong></p></td>
+			<td><b>Link</b></td> <td><b>Cost ($/Tb)</b></td> <td><b>Link</b></td> <td><b>Cost ($/Tb)</b></td> 
+			<td><b>Link</b></td> <td><b>Cost ($/Tb)</b></td>
 		</tr>
 		<tr>
 			<td>So-N1</td> <td>60</td> <td>N2-N4</td> <td>20</td> <td>N5-N4</td> <td>10</td>
@@ -27,23 +28,18 @@ Suppose you need to write a routing algorithm for a communications network that 
 		<tr>
 			<td>N1-N3</td> <td>50</td> <td>N4-N5</td> <td>20</td> <td>&nbsp;</td> <td>&nbsp;</td>
 		</tr>
-	</tbody>
 </table>
-</div>
+</div>  
 
-
-
-<div class="6u$"><span class="image fit"><img src="./images/network_problem_1.svg"></span></div>
-
-
+<div class="6u$"><span class="image fit"><img src="./images/network_problem_1.svg" alt=""></span></div>  
 
 ---
 
-**MATLAB Code: ** [problem_1.m](./problem_1.m)
+**MATLAB Code:** [problem_1.m](./problem_1.m)
 
-Author: Yash Bansod
-Date: 19th February, 2020
-Problem 1 - Networks & Shortest Path
+Author: Yash Bansod  
+Date: 19th February, 2020  
+Problem 1 - Networks & Shortest Path  
 
 GitHub: https://github.com/YashBansod
 
@@ -87,7 +83,7 @@ title('Graph representing nodes and link cost')
 xlabel('X Axis')
 ylabel('Y Axis')
 ```
-<div><span class="image fit"><img src="./images/problem_1_01.png"></span></div>
+<div><span class="image fit"><img src="./images/problem_1_01.png" alt=""></span></div>
 
 ### Calculate and plot the shortest path
 
@@ -106,7 +102,7 @@ xlabel('X Axis')
 ylabel('Y Axis')
 ```
 
-<div><span class="image fit"><img src="./images/problem_1_02.png"></span></div>
+<div><span class="image fit"><img src="./images/problem_1_02.png" alt=""></span></div>
 
 ### Print the computation results
 
@@ -132,7 +128,6 @@ Suppose there are the following per drone costs associated with shipping drones 
 
 <div class="table-wrapper">
 <table class="alt">
-	<tbody>
 		<tr>
 			<td>&nbsp;</td> <td colspan=6><b>To</b></td>
 		</tr>
@@ -157,11 +152,10 @@ Suppose there are the following per drone costs associated with shipping drones 
 		<tr>
 			<td><b>Baltimore (BA)</b></td> <td>&nbsp;</td> <td>&nbsp;</td> <td>&nbsp;</td> <td>&nbsp;</td> <td>&nbsp;</td> <td>-</td>
 		</tr>
-	</tbody>
 </table>
 </div>
 
-<div class="6u$"><span class="image fit"><img src="./images/transshipment_problem_2.svg"></span></div>
+<div class="6u$"><span class="image fit"><img src="./images/transshipment_problem_2.svg" alt=""></span></div>
 
 **Standard Form Representation:**
 
@@ -189,11 +183,11 @@ X_B^A ∈ Z(0,+), A ∈ {CH, DA}, B ∈ {LA, BA}
 
 ---
 
-**MATLAB Code: ** [problem_2.m](./problem_2.m)
+**MATLAB Code:** [problem_2.m](./problem_2.m)
 
-Author: Yash Bansod
-Date: 19th February, 2020
-Problem 2 - Transshipment/Production Problem
+Author: Yash Bansod  
+Date: 19th February, 2020  
+Problem 2 - Transshipment/Production Problem  
 
 GitHub: https://github.com/YashBansod
 
@@ -257,7 +251,7 @@ xlabel('X Axis')
 ylabel('Y Axis')
 ```
 
-<div><span class="image fit"><img src="./images/problem_2.png"></span></div>
+<div><span class="image fit"><img src="./images/problem_2.png" alt=""></span></div>
 
 ### Calculate the least cost paths from production plants to markets
 
@@ -334,7 +328,6 @@ Consider a Project that is characterized by the following activity edge table. T
 
 <div class="table-wrapper">
 <table class="alt">
-	<tbody>
 		<tr>
 			<td><b> Activity </b></td><td><b> Nodes </b></td><td><b> Duration Est (days) </b></td><td><b> Labor Cost ($/h) </b></td>
 		</tr>
@@ -371,21 +364,20 @@ Consider a Project that is characterized by the following activity edge table. T
 		<tr>
 			<td>N</td><td>8, 9</td><td>9</td><td>$100</td>
 		</tr>
-	</tbody>
 </table>
 </div>
 
-<div><span class="image fit"><img src="./images/critical_path_method_1.svg"></span></div>
+<div><span class="image fit"><img src="./images/critical_path_method_1.svg" alt=""></span></div>
 
-<div><span class="image fit"><img src="./images/critical_path_method_2.svg"></span></div>
+<div><span class="image fit"><img src="./images/critical_path_method_2.svg" alt=""></span></div>
 
 ---
 
-**MATLAB Code: ** [problem_3.m](./problem_3.m)
+**MATLAB Code:** [problem_3.m](./problem_3.m)
 
-Author: Yash Bansod
-Date: 19th February, 2020
-Problem 3 - Critical Path Method
+Author: Yash Bansod  
+Date: 19th February, 2020  
+Problem 3 - Critical Path Method  
 
 GitHub: https://github.com/YashBansod
 
@@ -430,7 +422,7 @@ xlabel('X Axis')
 ylabel('Y Axis')
 ```
 
-<div><span class="image fit"><img src="./images/problem_3_01.png"></span></div>
+<div><span class="image fit"><img src="./images/problem_3_01.png" alt=""></span></div>
 
 ### Calculate the longest path
 
@@ -496,7 +488,7 @@ highlight(l_g_plot, critical_path, 'MarkerSize', 6, ...
     'NodeColor', 'r', 'EdgeColor', 'g');
 ```
 
-<div><span class="image fit"><img src="./images/problem_3_02.png"></span></div>
+<div><span class="image fit"><img src="./images/problem_3_02.png" alt=""></span></div>
 
 ### Print the computation results
 
@@ -532,7 +524,6 @@ The case of a company that produces a product at two plants (P1 and P2) and has 
 
 <div class="table-wrapper">
 <table class="alt">
-	<tbody>
 		<tr>
 			<td colspan="6"><b>Plant to Warehouse (WH)</b></td>
 		</tr>
@@ -548,13 +539,11 @@ The case of a company that produces a product at two plants (P1 and P2) and has 
 		<tr>
 			<td><b>P2</b></td> <td>$510</td> <td>$600</td> <td>175</td> <td>200</td> <td>300</td>
 		</tr>
-	</tbody>
 </table>
 </div>
 
 <div class="table-wrapper">
 <table class="alt">
-	<tbody>
 		<tr>
 			<td colspan="7"><b>Warehouse to Retail Outlet (RO)</b></td>
 		</tr>
@@ -570,29 +559,26 @@ The case of a company that produces a product at two plants (P1 and P2) and has 
 		<tr>
 			<td><b>WH2</b></td> <td>$390</td> <td>$410</td> <td>$440</td> <td>125</td> <td>150</td> <td>75</td>
 		</tr>
-	</tbody>
 </table>
 </div>
 
 <div class="table-wrapper">
 <table class="alt">
-	<tbody>
 		<tr>
 			<td>&nbsp;</td> <td><b> RO1 </b></td> <td><b> RO2 </b></td> <td><b> RO3 </b></td>
 		</tr>
 		<tr>
 			<td><b> Demand (Units) </b></td> <td>100</td> <td>150</td> <td>100</td>
 		</tr>
-	</tbody>
 </table>
 </div>
 ---
 
-**MATLAB Code: ** [problem_4.m](./problem_4.m)
+**MATLAB Code:** [problem_4.m](./problem_4.m)
 
-Author: Yash Bansod
-Date: 11th March, 2020
-Problem 4 - Transshipment Problem
+Author: Yash Bansod  
+Date: 11th March, 2020  
+Problem 4 - Transshipment Problem  
 
 GitHub: https://github.com/YashBansod
 
@@ -637,7 +623,7 @@ xlabel('X Axis')
 ylabel('Y Axis')
 ```
 
-<div><span class="image fit"><img src="./images/problem_4_01.png"></span></div>
+<div><span class="image fit"><img src="./images/problem_4_01.png" alt=""></span></div>
 
 ### Define the optimization problem
 

@@ -1,6 +1,5 @@
-# Operations Research
-MATLAB implementation of all the Operations Research algorithms and problems solved by me.
-
+# [Operations Research](./https://github.com/YashBansod/Operations-Research/)  
+MATLAB implementation of all the Operations Research algorithms and problems solved by me.  
 Operations research (OR) is an analytical method of problem-solving and decision-making that is useful in the management of organizations. In operations research, problems are broken down into basic components and then solved in defined steps by mathematical analysis.
 
 <div><span class="image fit"><img src="./operations_research.svg"></span></div>

@@ -6,9 +6,9 @@
 
 Consider a bank with two tellers. Assume that the arrival process is Poisson at a rate of 2 per minute and that service times are exponential with a mean of 40 seconds. It is currently 10 AM. Assume that there is sufficient capacity for any number of customers in queue and that customers are served on a first in/first out basis.
 
-<div class="6u$"><span class="image fit"><img src="./images/queueing_theory_1.svg"></span></div>
+<div class="6u$"><span class="image fit"><img src="./images/queueing_theory_1.svg" alt=""></span></div>
 
-<div class="6u$"><span class="image fit"><img src="./images/queueing_theory_2.svg"></span></div>
+<div class="6u$"><span class="image fit"><img src="./images/queueing_theory_2.svg" alt=""></span></div>
 
 Develop a MATLAB MC simulation for the queuing system.
 
@@ -16,9 +16,9 @@ Develop a MATLAB MC simulation for the queuing system.
 
 **MATLAB Code:** [problem_1.m](./problem_1.m)
 
-Author: Yash Bansod
-Date: 9th April, 2020
-Problem 1 - Simple Queueing MC Simulation
+Author: Yash Bansod  
+Date: 9th April, 2020  
+Problem 1 - Simple Queueing MC Simulation  
 
 GitHub: https://github.com/YashBansod
 
@@ -238,10 +238,10 @@ ylabel('Queue Length')
 title('Queue Length Over Time')
 grid on;
 ```
-<div><span class="image fit"><img src="./images/problem_1_01.png"></span></div>
-<div><span class="image fit"><img src="./images/problem_1_02.png"></span></div>
-<div><span class="image fit"><img src="./images/problem_1_03.png"></span></div>
-<div><span class="image fit"><img src="./images/problem_1_04.png"></span></div>
+<div><span class="image fit"><img src="./images/problem_1_01.png" alt=""></span></div>
+<div><span class="image fit"><img src="./images/problem_1_02.png" alt=""></span></div>
+<div><span class="image fit"><img src="./images/problem_1_03.png" alt=""></span></div>
+<div><span class="image fit"><img src="./images/problem_1_04.png" alt=""></span></div>
   
 
 ---
@@ -259,9 +259,9 @@ Develop a MATLAB Monte Carlo Simulation for the G/G/1 problem that:
 
 **MATLAB Code:** [problem_2.m](./problem_2.m)
 
-Author: Yash Bansod
-Date: 17th May, 2020
-Problem 2 - Simple Queueing MC Simulation
+Author: Yash Bansod  
+Date: 17th May, 2020  
+Problem 2 - Simple Queueing MC Simulation  
 
 GitHub: https://github.com/YashBansod
 
@@ -446,7 +446,7 @@ ylabel('Queue Length')
 title('Queue Length Over Time')
 grid on;
 ```
-<div><span class="image fit"><img src="./images/problem_2_01.png"></span></div>
-<div><span class="image fit"><img src="./images/problem_2_02.png"></span></div>
-<div><span class="image fit"><img src="./images/problem_2_03.png"></span></div>
-<div><span class="image fit"><img src="./images/problem_2_04.png"></span></div>
+<div><span class="image fit"><img src="./images/problem_2_01.png" alt=""></span></div>
+<div><span class="image fit"><img src="./images/problem_2_02.png" alt=""></span></div>
+<div><span class="image fit"><img src="./images/problem_2_03.png" alt=""></span></div>
+<div><span class="image fit"><img src="./images/problem_2_04.png" alt=""></span></div>

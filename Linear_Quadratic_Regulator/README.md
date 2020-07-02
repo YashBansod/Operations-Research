@@ -12,16 +12,16 @@ where “nc” means “no control.”
 
 We want to build a Linear Quadradic Regulator (LQR) that will optimally return the system to tracking an object given it has lost track. Note: the control input provides the correction required to bring the sensor back into track (e.g., from a Kalman Filter).
 
-<div><span class="image fit"><img src="./images/lqr.svg"></span></div>
+<div><span class="image fit"><img src="./images/lqr.svg" alt=""></span></div>
 
 
 
 ---
 **MATLAB Code:** [problem_1.m](./problem_1.m)
 
-Author: Yash Bansod
-Date: 2nd May, 2020
-Problem 1 - Linear Quadratic Regulator
+Author: Yash Bansod  
+Date: 2nd May, 2020  
+Problem 1 - Linear Quadratic Regulator  
 
 GitHub: https://github.com/YashBansod
 
@@ -107,5 +107,5 @@ xlabel('Time (seconds)');
 ylabel('Value');
 ```
 
-<div><span class="image fit"><img src="./images/problem_1_01.png"></span></div>
+<div><span class="image fit"><img src="./images/problem_1_01.png" alt=""></span></div>
 
